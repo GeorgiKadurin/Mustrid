@@ -4,12 +4,12 @@
 
 from tkinter import *
 from tkinter import font # vajalik teksti fondi muutmiseks
-
+from math import*
 raam = Tk()
 raam.title("Tahvel")
 tahvel = Canvas(raam, width=1000, height=800, background="white")
 tahvel.grid()
-
+9
 
 # ühendatud kriipsud (suvaline arv koordinaatide paare)
 tahvel.create_line(30,50,  300,50,  width=52 , fill="blue")
@@ -27,8 +27,52 @@ tahvel.create_line(30,450,  300,450,  width=150 , fill="#fafaf7")
 tahvel.create_oval(215, 500, 115, 400, fill="red")
 
 
-tahvel.create_rectangle(30,750,200,600, fill="red" )
-tahvel.create_oval(32, 750, 200, 600, fill="yellow")
+k=10
+x0=0
+y0=0
+x1=600
+y1=600
+a=300
+r=(a**2+a**2)**(1/2)
+p=(a-r)
+
+#for i in range(12):
+#    x0+=p
+#    y0+=p
+#    x1-=p
+#    y1-=p
+    
+#    tahvel.create_rectangle(x0,y0,x1,y1, width=1, fill="red" )
+#    tahvel.create_oval(x0, y0, x1, y1,width=1, fill="yellow")
+#    p=r-a
+#    r=r-p
+#    a=((r)*sqrt(2))/2
+#tahvel.grid()
+
+
+tahvel.grid()
+
+
+#x1=50
+#y1=x1*8
+#for i in range(8):
+#    for j in range (8):
+#        x2=i*x1
+#        y2=j*x1
+#        if(i+j)%2==0:
+#            color="white"
+#        else:
+#            color="black"
+#        x=tahvel.create_rectangle(x2,y2,x2+x1,y2+x1,fill=color)
+
+
+
+
+
+
+    #tahvel.create_line(420,400,  470,400,  width=45 , fill="red")
+    #tahvel.create_line(420,450,  470,450,  width=45 , fill="yellow")
+
 
 
 
@@ -55,45 +99,24 @@ raam.mainloop()
 
 
 
-##from tkinter import *
-##from tkinter import font # vajalik teksti fondi muutmiseks
 
-##raam = Tk()
-##raam.title("Tahvel")
-##tahvel = Canvas(raam, width=600, height=600, background="white")
-##tahvel.grid()
+#from tkinter import *
+#from tkinter import font # vajalik teksti fondi muutmiseks
 
-### üksik kriips (x0, y0, x1, y1)
-##tahvel.create_line(30, 40, 300, 40)
+#raam = Tk()
+#raam.title("Tahvel")
+#tahvel = Canvas(raam, width=600, height=600, background="white")
+#tahvel.grid()
 
-### ühendatud kriipsud (suvaline arv koordinaatide paare)
-##tahvel.create_line(30,60,  300,60,  300,100,  60,100)
 
-### võimalik on muuta joone paksust (width) ja sisu värvi (fill)
-##tahvel.create_line(30, 130, 300, 130, width=4, fill="red")
 
-### teistsugune joone stiil
-##tahvel.create_line(30, 150, 300, 150, width=5, dash=(5, 1, 2, 1), arrow=LAST)
+## ristkülik
+#tahvel.create_rectangle(30,260,  300,300)
 
-### tõmbab kriipsud, ühendab otsapunktid ja värvib sisu
-### värve saab määrata ka rgb komponentidena
-### vt. http://www.colorpicker.com/
-##tahvel.create_polygon(30,160,  300,160,  300,200,  60,200, fill="#95BD9D")
+## ovaal
+#tahvel.create_oval(30,260,  300,300, width=2, outline="blue", fill="wheat")
 
-### ristkülik
-##tahvel.create_rectangle(30,260,  300,300)
 
-### ovaal
-##tahvel.create_oval(30,260,  300,300, width=2, outline="blue", fill="wheat")
-
-### proovi liigutada hiirt selle ovaali kohale
-##tahvel.create_oval(330, 330, 400, 400, fill="gray", activefill="pink")
-
-### kui soovid teksti esitamisel ise fonti valida, siis tuleb enne vastav font luua
-##suur_font = font.Font(family='Helvetica', size=32, weight='bold')
-##tahvel.create_text(30, 500, text="Tere!", font=suur_font, anchor=NW)
-
-##raam.mainloop()
-
+#raam.mainloop()
 
 
